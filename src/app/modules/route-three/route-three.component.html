@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 border-bottom">
+            <app-component-one [count]="counter.count"></app-component-one>
+        </div>
+        <div class="col-6 border-bottom">
+            <app-component-two (resetTimer)="getResetTimer($event)" (startStopTimer)="getStartStopTimer($event)"
+                (initialLimit)="getInitialLimit($event)" [counter]="counter.pause"></app-component-two>
+        </div>
+        <div class="col-6">
+            <app-component-three [counter]="counter"></app-component-three>
+        </div>
+        <div class="col-6">
+            <app-component-four [countOnStatePauseStart]="countOnStatePauseStart"></app-component-four>
+        </div>
+    </div>
+</div>

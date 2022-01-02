@@ -1,0 +1,15 @@
+<section>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Enter Timer Limit</span>
+        <input type="number" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm" [(ngModel)]="limit" (ngModelChange)="getLimitValue($event)">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="startPauseMethod()">Start/Pause</button>
+    <button type="button" class="btn btn-secondary" (click)="resetMethod()">Reset</button>
+
+   <ng-container *ngIf="counter.length">
+    <div *ngFor="let state of counter">
+        {{state.method}} at {{state.pause_at}}
+    </div> 
+   </ng-container>
+</section>

@@ -1,0 +1,6 @@
+
+<ng-container *ngIf="counter.pause.length">
+    <p *ngFor="let state of counter.pause">
+        {{state.method}} at {{state.time| date: 'dd/MM/yyyy HH:mm:ss'}}
+    </p>
+</ng-container>
